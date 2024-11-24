@@ -16,7 +16,7 @@ const Product = ({product}:ProductProps)=>{
             <p className="font-bold">{product.price} ₽</p>
             {description && <div>
                 <p>{product.description}</p>
-                <p>Rate: <span style={{fontWeight:'bold'}}>{product.rating.rate}</span></p>
+                <p>Rate: <span style={{fontWeight:'bold'}}>{product?.rating?.rate}</span></p>
             </div>}
             <button onClick={()=>{setDescription(prev=>!prev)}} className={btnClasses.join(' ')}>
                 {!description ? 'Show description' :'Hide description'}
